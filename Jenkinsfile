@@ -17,7 +17,7 @@ pipeline {
       stage('Gitleaks') {
     steps {
         script {
-            sh '/usr/local/bin/gitleaks --path=yourrepository'
+            sh '/usr/local/bin --path=yourrepository'
         }
     }
 }
