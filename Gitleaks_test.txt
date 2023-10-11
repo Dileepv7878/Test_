@@ -1,0 +1,13 @@
+public class Java_git {
+    public static void main(String[] args) {
+        String username = "john_doe";
+        String password = "johns_password";
+
+        // Placeholder for sensitive data
+        String secretKey = "your_secret_key_here";
+
+        System.out.println("Username: " + username);
+        System.out.println("Password: " + password);
+        System.out.println("Secret Key: " + secretKey);
+    }
+}
