@@ -14,14 +14,14 @@ pipeline {
             }
         }
 
-        stage('Gitleaks') {
+      stage('Gitleaks') {
     steps {
         script {
-            def gitleaksPath = sh(script: 'which gitleaks', returnStdout: true).trim()
-            sh "${gitleaksPath} --path=yourrepository"
+            sh '/usr/local/bin/gitleaks --path=yourrepository'
         }
     }
 }
 
     }
 }
+
