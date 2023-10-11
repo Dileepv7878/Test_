@@ -1,0 +1,29 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
+
+        stage('Build') {
+            steps {
+                echo "Build success"
+            }
+        }
+
+        stage('Gitleaks') {
+    steps {
+        script {
+            def gitRepoURL = 'https://github.com/Dileepv7878/Test_.git'
+            sh "git clone ${gitRepoURL}"
+            sh "gitleaks --path=yourrepository"
+        }
+    }
+}
+
+    }
+}
+
